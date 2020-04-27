@@ -25,7 +25,7 @@ def m30(code):
 stockList = ts.get_zz500s()
 startDate = time.strftime("%Y-%m-%d", time.localtime(time.time() - 24 * 3600 * 5))
 endDate = time.strftime("%Y-%m-%d", time.localtime(time.time()))
-goodStock1 = goodStock2 = {};
+goodStock1 = goodStock2 = {}
 for index, row in stockList.iterrows():
     code = row["code"]
     name = row["name"]
@@ -39,7 +39,7 @@ for index, row in stockList.iterrows():
     if len(result) == len(closeList):
         goodStock1[code] = name
     todayClose = closeList[-1]
-    if todayClose >= m30 and todayClose <= 1.05 * m30:
+    if m30 <= todayClose <= 1.05 * m30:
         goodStock2[code] = name
 
     time.sleep(2)

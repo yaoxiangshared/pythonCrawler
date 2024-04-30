@@ -1,0 +1,13 @@
+import mysql.connector
+# 数据库连接配置
+config = {
+    'user': 'root',
+    'password': 'your_password',
+    'host': 'localhost',
+    'database': 'your_database',
+    'raise_on_warnings': True
+}
+
+# 建立连接
+cnx = mysql.connector.connect(**config)
+cursor = cnx.cursor()

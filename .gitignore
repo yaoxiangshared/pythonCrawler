@@ -1,2 +1,10 @@
-/.hypothesis/
-/.python-version
+/git
+*.workspace
+dags/**/*.pyc
+/.idea
+/logs
+/db-data
+.DS_Store
+dags/config/env
+*.ini
+.idea

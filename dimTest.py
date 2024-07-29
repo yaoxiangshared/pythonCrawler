@@ -1,4 +1,4 @@
-import mysql.connector
+import mysql.connector as mysql_connector
 import configparser
 import platform
 import socket
@@ -29,5 +29,5 @@ dbconfig = {
 print( dbconfig)
 
 # 建立连接
-cnx = mysql.connector.connect(**dbconfig)
+cnx = mysql_connector.connect(**dbconfig)
 cursor = cnx.cursor()

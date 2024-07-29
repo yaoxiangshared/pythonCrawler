@@ -8,3 +8,4 @@ dags/**/*.pyc
 dags/config/env
 *.ini
 .idea
+/venv/
